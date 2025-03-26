@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 4.2rem;
+  gap: 1.2rem;
+}
+
+.question {
+  font-size: 1.8rem;
+  line-height: 110%;
+}
+
+.goals {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.goal {
+  width: calc(50% - 0.6rem);
+  padding: 1.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 120%;
+  background-color: var(--color-bg-white);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.goal:hover {
+  border: 0.1rem solid var(--color-accent);
+}
+
+.word {
+  all: unset;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 120%;
+  text-decoration: underline;
+  cursor: pointer;
+}

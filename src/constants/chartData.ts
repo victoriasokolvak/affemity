@@ -1,0 +1,11 @@
+export const colors = ["#A9DEF4", "#9CC9DC", "#69A8C2", "#5190AA", "#31728D"];
+export const LINE_REFERENCES = [0, 12, 24, 36];
+export const BAR_RADIUS = 5.27;
+export const BAR_SIZE = window.innerWidth >= 768 ? 63 : 43;
+export const LINE_STROKE_WIDTH = 2.11;
+export const DOT_RADIUS = 11.5;
+export const DOT_BORDER_WIDTH = 4.6;
+export const DOT_START_COLOR = "#A9DEF4";
+export const DOT_END_COLOR = "#31728D";
+export const LINE_COLOR = "#111111";
+export const REFERENCE_LINE_COLOR = "#D2CFDF";

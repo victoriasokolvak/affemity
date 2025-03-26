@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2.4rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 110%;
+  margin: 1.2rem 0;
+}
+
+.title_highlighted {
+  color: var(--color-accent);
+}
+
+.text {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+  margin: 1.2rem 0 4.2rem;
+}
+
+.bottom_text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: 2.4rem 0 1.6rem;
+  color: var(--color-text-secondary);
+}

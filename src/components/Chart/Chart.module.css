@@ -1,0 +1,58 @@
+.chart {
+  position: relative;
+}
+
+.text {
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.container {
+  width: 32.6rem;
+  height: 14.2rem;
+}
+
+.label_left {
+  position: absolute;
+  padding: 0.66rem 0.99rem;
+  top: 10.2rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.47rem;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+  box-shadow: 0 0.21rem 1.05rem 0 rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.label_right {
+  position: absolute;
+  padding: 0.65rem 0.78rem;
+  top: 2rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.47rem;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+  box-shadow: 0 0.21rem 1.05rem 0 rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.weeks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.63rem;
+  padding: 0 0.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.week {
+  margin: 0;
+}
