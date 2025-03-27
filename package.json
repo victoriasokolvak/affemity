@@ -13,6 +13,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.0",
     "@reduxjs/toolkit": "^2.6.1",
     "@types/react-router-dom": "^5.3.3",
     "gh-pages": "^6.3.0",

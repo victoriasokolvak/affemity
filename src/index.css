@@ -12,14 +12,14 @@
   --color-text-primary: #111111;
   --color-text-secondary: #666666;
   --color-backdrop: #11111180;
-  --color-btn-disabled: #b7b4c1;
+  --color-btn-disabled-text: #b7b4c1;
   --color-error: #ea6747;
 }
 
 * {
   box-sizing: border-box;
   font-family: var(--font-primary);
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-main);
 }
 
 html {
@@ -30,4 +30,18 @@ html {
   html {
     font-size: 15px;
   }
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

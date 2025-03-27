@@ -1,7 +1,3 @@
-// import { Chart } from "../../components/Chart";
-// import { Goal } from "../../components/Goal";
-// import { Logo } from "../../components/Logo";
-// import { Rights } from "../../components/Rights";
 import { Chart } from "../../components/Chart";
 import { Goals } from "../../components/Goals";
 import { Logo } from "../../components/Logo";
@@ -25,7 +21,7 @@ export const HomePage = () => {
         <Chart />
         <Goals />
       <p className={styles.bottom_text}>
-        By continuing, you agree to our Terms of Service | Privacy Policy <br />{" "}
+        By continuing, you agree to our Terms of Service | Privacy Policy <br />
         2024 © All Rights Reserved.
       </p>
     </div>

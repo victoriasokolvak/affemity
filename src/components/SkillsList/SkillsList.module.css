@@ -1,0 +1,100 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.6rem;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-border);
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+}
+
+.item:hover {
+  border: 0.1rem solid var(--color-accent);
+}
+
+.row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-bg-white);
+}
+.icon_block {
+  width: 3rem;
+  height: 3rem;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-white);
+}
+
+.text {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 120%;
+  background-color: var(--color-bg-white);
+}
+
+.checkbox {
+  appearance: none;
+  position: relative;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid var(--color-border);
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-image: url("../../../public/Checked.svg");
+  background-size: 50% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.button_block {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.6rem 2.4rem;
+  margin: 0 auto;
+}
+
+.button {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-bg-white);
+  background-color: var(--color-accent);
+  padding: 1.4rem;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 32.7rem;
+  cursor: pointer;
+}
+
+.disabled {
+  color: var(--color-btn-disabled-text);
+  background-color: var(--color-btn-disabled);
+  cursor: not-allowed;
+}
