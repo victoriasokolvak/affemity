@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './SkillsList.module.css';
+import { useNavigate } from 'react-router-dom';
 
 interface Skill {
   id: number;
@@ -12,6 +13,7 @@ interface SkillsListProps {
 }
 
 export const SkillsList = ({ skills }: SkillsListProps) => {
+  const navigate = useNavigate();
   const [selectedSkills, setSelectedSkills] = useState<number[]>([]);
 
   const toggleSkill = (id: number) => {
@@ -21,6 +23,12 @@ export const SkillsList = ({ skills }: SkillsListProps) => {
   };
 
   const isButtonDisabled = selectedSkills.length === 0;
+
+  const handleContinue = () => {
+    if (!isButtonDisabled) {
+      navigate('/email');
+    }
+  };
 
   return (
     <div className={styles.skills}>
@@ -49,6 +57,7 @@ export const SkillsList = ({ skills }: SkillsListProps) => {
         <button
           className={`${styles.button} ${isButtonDisabled ? styles.disabled : ''}`} 
           disabled={isButtonDisabled}
+          onClick={handleContinue}
         >
           Continue
         </button>

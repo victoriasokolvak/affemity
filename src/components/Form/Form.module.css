@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.email_input {
+  padding: 1.5rem 1.2rem;
+  border-radius: 1rem;
+  border: none;
+  width: 32.7rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+  background-color: var(--color-btn-disabled);
+  border: 0.1rem solid var(--color-btn-disabled);
+}
+
+.email_input::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+.email_input:focus {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+  background-color: var(--color-bg-white);
+  border: 0.1rem solid var(--color-accent);
+  outline: none;
+}
+
+.error_input:focus {
+  border: 0.1rem solid var(--color-error);
+}
+
+.error {
+  margin-top: 0.4rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 120%;
+  color: var(--color-error);
+}
+
+.button_block {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.button {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-bg-white);
+  background-color: var(--color-accent);
+  padding: 1.4rem;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
