@@ -16,7 +16,7 @@ Check out the live demo of the project here: [Affemity Demo](https://victoriasok
 
 2. **Navigate to the Project Directory**
    ```bash
-   cd byteex
+   cd affemity
    ```
 
 3. **Install Dependencies**

@@ -1,34 +1,21 @@
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import styles from './Form.module.css';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { validateEmail } from '../utils/emailValidation';
 
-interface EmailFormProps {
-  onValidSubmit: (email: string) => void;
-}
-
-export const Form: React.FC<EmailFormProps> = ({ onValidSubmit }) => {
-  const [email, setEmail] = useState<string>('');
-  const [error, setError] = useState<string>('');
-  const [isValid, setIsValid] = useState<boolean>(false);
-  const [touched, setTouched] = useState<boolean>(false);
-
-  const validateEmail = (value: string): void => {
-    const emailRegex = /@/;
-    if (!value) {
-      setError('Email cannot be empty');
-      setIsValid(false);
-    } else if (!emailRegex.test(value)) {
-      setError('Email must contain @');
-      setIsValid(false);
-    } else {
-      setError('');
-      setIsValid(true);
-    }
-  };
+export const Form: React.FC<{ onValidSubmit: (email: string) => void }> = ({ onValidSubmit }) => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [isValid, setIsValid] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (touched) {
       const timerId = setTimeout(() => {
-        validateEmail(email);
+        const { error, isValid } = validateEmail(email);
+        setError(error);
+        setIsValid(isValid);
       }, 500);
       return () => clearTimeout(timerId);
     }
@@ -36,9 +23,7 @@ export const Form: React.FC<EmailFormProps> = ({ onValidSubmit }) => {
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (!touched) {
-      setTouched(true);
-    }
+    if (!touched) setTouched(true);
   };
 
   const handleSubmit = (event: FormEvent) => {
@@ -48,6 +33,7 @@ export const Form: React.FC<EmailFormProps> = ({ onValidSubmit }) => {
       setEmail('');
       setError('');
       setTouched(false);
+      navigate('/plan');
     } else {
       setError('Please enter a valid email');
     }
@@ -55,12 +41,12 @@ export const Form: React.FC<EmailFormProps> = ({ onValidSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <input 
-        type="email" 
-        value={email} 
-        onChange={handleEmailChange} 
-        placeholder="example@gmail.com" 
-        className={`${styles.email_input} ${error ? styles.error_input : ''}`} 
+      <input
+        type="email"
+        value={email}
+        onChange={handleEmailChange}
+        placeholder="example@gmail.com"
+        className={`${styles.email_input} ${error ? styles.error_input : ''}`}
       />
       {error && <span className={styles.error}>{error}</span>}
       <div className={styles.button_block}>

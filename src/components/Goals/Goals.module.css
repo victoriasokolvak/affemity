@@ -26,6 +26,7 @@
   line-height: 120%;
   background-color: var(--color-bg-white);
   border: 0.1rem solid var(--color-border);
+  color: var(--color-text-primary);
   border-radius: 1rem;
   text-decoration: none;
   cursor: pointer;

@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.4rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+  color: var(--color-text-primary);
+}
+
+.progress {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 120%;
+  color: var(--color-text-primary);
+}
+
+.bar {
+  width: 100%;
+  height: 1.4rem;
+  background-color: var(--color-btn-disabled);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.bar_progress {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 1rem;
+  transition: 0.05s ease-in-out;
+}
